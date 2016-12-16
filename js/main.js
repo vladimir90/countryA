@@ -24,9 +24,10 @@ $(document).ready(function() {
                 var clanguage = response[0].languages[0];
                 var countryCode = response[0].alpha2Code;
                 var ikonica = "http://flags.fmcdn.net/data/flags/normal/" + response[0].alpha2Code.toLowerCase() + ".png";
+                var map = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDhvY97ystbPrmTyzpSnVk4Zo0tjn6fKTg&q=" + response[0].name;
 
                 $('img').attr('src',ikonica);
-                
+                $('iframe').attr('src',map);
                 $(".name").html(cname);
                 $(".city").html(ccity);
                 $(".region").html(cregion);
